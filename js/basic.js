@@ -1,3 +1,5 @@
+AOS.init();
+
 /*******************
 	portfolio navbar
 ********************/
@@ -63,3 +65,10 @@ $("#list_binggrae").click(function () {
 $(".closeBtn").click(function () {
 	$(".modal").hide();
 });
+
+/**********************
+	스크롤값
+ **********************/
+// window.addEventListener("scroll", function () {
+// 	console.log(window.scrollY);
+// });

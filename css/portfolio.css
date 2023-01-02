@@ -106,6 +106,7 @@
 #portfolio .content li:hover {
 	transform: scale(1.04);
 	transition: 0.3s;
+	cursor: pointer;
 }
 
 #portfolio .content li:hover .detail {
@@ -166,9 +167,7 @@
 
 /***** 모달창 *****/
 .modal {
-	display: flex;
 	display: none;
-	flex-direction: column;
 	position: absolute;
 	width: 50vw;
 	max-width: 1600px;
@@ -181,7 +180,6 @@
 	z-index: 200;
 }
 .modal .img_box {
-	/* border: solid 4px red; */
 	width: 38vw;
 	position: relative;
 	left: 50%;
@@ -191,7 +189,6 @@
 	width: 100%;
 }
 .modal .text_box {
-	/* border: solid 4px blue; */
 	padding-left: 30px;
 }
 .modal .modal_title {
@@ -203,8 +200,8 @@
 .modal .text_box i {
 	margin-right: 5px;
 }
-.modal .modal_viewport {
-	margin-bottom: 8px;
+.modal .text_box > div {
+	margin-bottom: 5px;
 }
 .modal .modal_palette {
 	display: flex;
@@ -241,7 +238,8 @@
 }
 .btn_wrap > button:hover {
 	border: 2px solid transparent;
-	background-color: var(--colorOrange);
+	background-color: var(--colordark);
+	transition: 0.5s;
 }
 .btn_wrap > button:hover a {
 	color: var(--colorlight);
@@ -296,7 +294,6 @@
 
 /*하이데코*/
 #modal_hideco .color:nth-of-type(1) {
-	border: 1px solid var(--colordark);
 	background-color: #f6e8d8;
 }
 #modal_hideco .color:nth-of-type(2) {

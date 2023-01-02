@@ -43,7 +43,7 @@
 	padding: 20px 20px 0;
 }
 
-#about .intro_box img {
+#about .intro_box .face {
 	position: relative;
 	width: 250px;
 	height: 250px;
@@ -51,10 +51,9 @@
 	transform: translate(-50%);
 	padding: 30px 10px 10px;
 	border-radius: 50%;
-	background-color: #d4d1d1;
+	background-color: #dddddd;
 	object-fit: contain;
 }
-
 #about .intro_box .intro_text {
 	margin-top: 20px;
 	font-size: 18px;
@@ -64,19 +63,20 @@
 	padding: 20px;
 }
 #about .contact_box h3 {
+	margin-top: 10px;
 	margin-bottom: 10px;
 	font-size: 25px;
 	font-family: nexa;
 	text-align: center;
 }
+#about .contact_box li {
+	margin-bottom: 5px;
+	font-size: 18px;
+}
 #about .contact_box li i {
-	margin-right: 5px;
+	margin-right: 8px;
 	font-size: 20px;
 	text-align: center;
-}
-#about .contact_box li {
-	font-size: 18px;
-	font-family: "S-CoreDream-3Light";
 }
 #about .contact_box li a {
 	color: black;

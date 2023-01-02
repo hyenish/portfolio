@@ -34,7 +34,7 @@ body {
 	color: var(--colorOrange);
 }
 
-.button {
+/* .button {
 	padding: 10px 40px;
 	border-radius: 10px;
 	background-color: #f2cf66;
@@ -42,7 +42,7 @@ body {
 	text-decoration: none;
 	text-shadow: 0px -2px #d1b358;
 	color: #fff;
-}
+} */
 
 .heading {
 	position: relative;
@@ -202,4 +202,19 @@ body {
 }
 #header nav ul li:last-child:hover::after {
 	display: none;
+}
+
+/***********************
+			푸터 FOOTER
+************************/
+footer {
+	height: 100px;
+	background-color: #222;
+}
+footer p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 100px;
+	color: var(--colorlight);
 }
