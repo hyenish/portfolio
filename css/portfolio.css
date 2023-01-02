@@ -102,6 +102,7 @@
 #portfolio .content li:nth-of-type(8) {
 	background: url(../img/binggrae_p.png) no-repeat 0 0 / cover;
 }
+
 #portfolio .content li:hover {
 	transform: scale(1.04);
 	transition: 0.3s;
