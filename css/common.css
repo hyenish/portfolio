@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+:root {
+	--colordark: #303841;
+	--colorlight: #eeeeee;
+	--colorblue: #00adb5;
+	--colorOrange: #ff5722;
+}
+
+/***************
+	공통 COMMON
+****************/
+body {
+	font-family: "S-CoreDream-3Light";
+}
+.section {
+	height: 100vh;
+	padding: 50px 10vw;
+}
+.hide {
+	display: none;
+}
+
+.dark {
+	color: var(--colordark);
+}
+.light {
+	color: var(--colorlight);
+}
+.blue {
+	color: var(--colorblue);
+}
+.orange {
+	color: var(--colorOrange);
+}
+
+.button {
+	padding: 10px 40px;
+	border-radius: 10px;
+	background-color: #f2cf66;
+	font-size: 25px;
+	text-decoration: none;
+	text-shadow: 0px -2px #d1b358;
+	color: #fff;
+}
+
+.heading {
+	position: relative;
+	padding: 10px;
+	font-size: 50px;
+	font-family: nexa;
+	text-align: center;
+}
+
+/********************
+			폰트 FONT
+*********************/
+
+/*한글용 폰트*/
+@font-face {
+	font-family: "S-CoreDream-3Light";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*프리텐다드*/
+@font-face {
+	font-family: "Pretendard-ExtraLight";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff")
+		format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Pretendard-Regular";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+		format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Pretendard-Bold";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+		format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+/*로고*/
+@font-face {
+	font-family: nexa_logo;
+	src: url(../font/Nexa-Trial-HeavyItalic.ttf);
+}
+
+/*gnb, 영어 all*/
+@font-face {
+	font-family: nexa;
+	src: url(../font/Nexa-Trial-Regular.ttf);
+}
+
+/********************
+				HEADER
+*********************/
+#header {
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	padding: 0 13vw;
+	background-color: var(--colordark);
+	z-index: 100;
+	box-shadow: 0 0 10px #222;
+}
+#header h1 a {
+	display: block;
+	font-family: nexa_logo;
+	line-height: 60px;
+	color: var(--colorblue);
+}
+#header nav ul {
+	display: flex;
+}
+#header nav ul li {
+	position: relative;
+	font-size: 25px;
+	margin: 0 20px;
+	line-height: 60px;
+	color: var(--colorlight);
+	transition: 0.5s ease-in;
+}
+#header nav ul li a {
+	color: var(--colorlight);
+}
+#header nav ul li:last-child a {
+	display: block;
+	color: var(--colorlight);
+}
+#header nav ul li:nth-child(1):before {
+	display: none;
+	content: "ihishy@hanmail.net";
+	position: absolute;
+	left: 50%;
+	bottom: -40px;
+	transform: translate(-50%);
+	width: 200px;
+	height: 40px;
+	border-radius: 8px;
+	background-color: #f96336;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	color: var(--colorlight);
+}
+#header nav ul li:nth-child(2):before {
+	display: none;
+	content: "010-5124-6711";
+	position: absolute;
+	left: 50%;
+	bottom: -40px;
+	transform: translate(-50%);
+	width: 200px;
+	height: 40px;
+	border-radius: 8px;
+	background-color: #f96336;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	color: var(--colorlight);
+}
+#header nav ul li:nth-child(3):before {
+	display: none;
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -150px;
+	transform: translate(-50%);
+	width: 150px;
+	height: 150px;
+	background: url(../img/opentalk.png) no-repeat 0 0 / cover;
+	border-radius: 8px;
+	background-color: #f96336;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	color: var(--colorlight);
+}
+#header nav ul li:hover::before {
+	display: block;
+}
+#header nav ul li:hover::after {
+	display: block;
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%);
+	border: 10px solid transparent;
+	border-bottom-color: #f96336;
+}
+#header nav ul li:last-child:hover::after {
+	display: none;
+}

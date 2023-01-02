@@ -1,0 +1,342 @@
+@charset "UTF-8";
+:root {
+	--colordark: #303841;
+	--colorlight: #eeeeee;
+	--colorblue: #00adb5;
+	--colorOrange: #ff5722;
+}
+
+#portfolio {
+	position: relative;
+	height: 100vh;
+	background-color: var(--colordark);
+}
+#portfolio .heading::before {
+	display: block;
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%);
+	width: 180px;
+	height: 5px;
+	background-color: var(--colorOrange);
+}
+
+/** 내비게이션 **/
+#portfolio .nav {
+	margin: 70px 0;
+}
+#portfolio .nav > ul {
+	display: flex;
+	justify-content: center;
+}
+#portfolio .nav li {
+	border: 1px solid #ccc;
+}
+#portfolio .nav li:last-child {
+	border-right: 1px solid #ccc;
+}
+#portfolio .nav li:hover a {
+	background-color: var(--colorblue);
+	color: #fff;
+}
+#portfolio .nav li a {
+	display: inline-block;
+	width: 120px;
+	font-family: nexa;
+	line-height: 40px;
+	text-align: center;
+	color: #999;
+}
+#portfolio .nav li a.active {
+	background-color: var(--colorblue);
+	color: #fff;
+}
+
+/** 사이트 리스트 **/
+#portfolio .content > ul {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	gap: 20px;
+}
+#portfolio .content li {
+	background-color: #999;
+	position: relative;
+	width: calc((100% / 4) - 20px);
+	height: 25vh;
+	box-shadow: 2px 2px 10px #222;
+}
+
+/*티빙*/
+#portfolio .content li:nth-of-type(1) {
+	background: url(../img/tving_p.png) no-repeat 0 0 / cover;
+}
+/*메종키츠네*/
+#portfolio .content li:nth-of-type(2) {
+	background: url(../img/maison_p.png) no-repeat 0 0 / cover;
+}
+/*에그드랍*/
+#portfolio .content li:nth-of-type(3) {
+	background: url(../img/eggdrop1.png) no-repeat 0 0 / cover;
+}
+/*하이데코*/
+#portfolio .content li:nth-of-type(4) {
+	background: url(../img/hideco_p.png) no-repeat 0 0 / cover;
+}
+/*타이어테크*/
+#portfolio .content li:nth-of-type(5) {
+	background: url(../img/tiretech_p.png) no-repeat 0 0 / cover;
+}
+/*가을톡*/
+#portfolio .content li:nth-of-type(6) {
+	background: url(../img/sns1.png) no-repeat 0 41% / cover;
+}
+/*전남의 섬*/
+#portfolio .content li:nth-of-type(7) {
+	background: url(../img/island_p.png) no-repeat 0 0 / cover;
+}
+/*빙그레*/
+#portfolio .content li:nth-of-type(8) {
+	background: url(../img/binggrae_p.png) no-repeat 0 0 / cover;
+}
+#portfolio .content li:hover {
+	transform: scale(1.04);
+	transition: 0.3s;
+}
+
+#portfolio .content li:hover .detail {
+	opacity: 1;
+}
+#portfolio .content li:hover .title {
+	transform: translateY(0px);
+}
+#portfolio .content li:hover .desc {
+	transform: translateY(0px);
+}
+#portfolio .content li a {
+	display: block;
+}
+#portfolio .detail {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	opacity: 0;
+	transition: 0.3s;
+}
+#portfolio .detail .title {
+	position: relative;
+	font-size: 28px;
+	font-family: "Pretendard-Bold";
+	color: var(--colorblue);
+	transform: translateY(50px);
+	transition: 0.5s;
+	text-shadow: 1px 1px 2px #777;
+}
+#portfolio .detail .desc {
+	position: relative;
+	display: inline-block;
+	margin-top: 20px;
+	font-size: 16px;
+	font-family: "Pretendard-Regular";
+	line-height: 1.5;
+	word-break: keep-all;
+	color: var(--colorlight);
+	transform: translateY(50px);
+	transition: 0.5s;
+}
+#portfolio .detail .type {
+	position: relative;
+	margin-right: 10px;
+	font-size: 16px;
+	font-family: "Pretendard-ExtraLight";
+	color: var(--colorlight);
+	transform: translateY(50px);
+	transition: 0.5s;
+}
+
+/***** 모달창 *****/
+.modal {
+	display: flex;
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	width: 50vw;
+	max-width: 1600px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 20px;
+	z-index: 200;
+}
+.modal .img_box {
+	/* border: solid 4px red; */
+	width: 38vw;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+.modal .img_box img {
+	width: 100%;
+}
+.modal .text_box {
+	/* border: solid 4px blue; */
+	padding-left: 30px;
+}
+.modal .modal_title {
+	margin-bottom: 20px;
+	font-size: 38px;
+	font-family: "Pretendard-Bold";
+	text-align: center;
+}
+.modal .text_box i {
+	margin-right: 5px;
+}
+.modal .modal_viewport {
+	margin-bottom: 8px;
+}
+.modal .modal_palette {
+	display: flex;
+}
+.modal .color {
+	width: 15px;
+	height: 15px;
+	margin: auto 0 auto 10px;
+	border-radius: 3px;
+}
+.modal .color:nth-of-type(1) {
+	background-color: #212529;
+}
+.modal .color:nth-of-type(2) {
+	background-color: #ff0c39;
+}
+.modal .modal_desc {
+	border-top: 1px solid #bbb;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+.modal .btn_wrap > button {
+	width: 100px;
+	height: 40px;
+	margin-top: 20px;
+	margin-right: 10px;
+	padding: 10px;
+	border: 1px solid var(--colordark);
+	border-radius: 10px;
+	background-color: #fff;
+}
+.modal .btn_wrap > button a {
+	color: #222;
+}
+.btn_wrap > button:hover {
+	border: 2px solid transparent;
+	background-color: var(--colorOrange);
+}
+.btn_wrap > button:hover a {
+	color: var(--colorlight);
+}
+.closeBtn {
+	/* border: 2px solid red; */
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+.closeBtn i {
+	text-align: center;
+	font-size: 35px;
+	color: var(--colordark);
+}
+/********************
+			팔레트
+*********************/
+/*티빙*/
+#modal_tiving .color:nth-of-type(1) {
+	background-color: #212529;
+}
+#modal_tiving .color:nth-of-type(2) {
+	background-color: #ff0c39;
+}
+/*메종키츠네*/
+#modal_maison .color:nth-of-type(1) {
+	background-color: #1d1d1b;
+}
+#modal_maison .color:nth-of-type(2) {
+	border: 1px solid var(--colordark);
+	background-color: #ffffff;
+}
+
+/*에그드랍*/
+#modal_eggdrop .color:nth-of-type(1) {
+	border: 1px solid var(--colordark);
+	background-color: #ffffff;
+}
+#modal_eggdrop .color:nth-of-type(2) {
+	background-color: #000000;
+}
+#modal_eggdrop .color:nth-of-type(3) {
+	background-color: #eb0029;
+}
+#modal_eggdrop .color:nth-of-type(4) {
+	background-color: #ffbe9e;
+}
+
+/*하이데코*/
+#modal_hideco .color:nth-of-type(1) {
+	border: 1px solid var(--colordark);
+	background-color: #f6e8d8;
+}
+#modal_hideco .color:nth-of-type(2) {
+	background-color: #6f675c;
+}
+#modal_hideco .color:nth-of-type(3) {
+	background-color: #464543;
+}
+
+/*타이어테크*/
+#modal_tiretech .color:nth-of-type(1) {
+	border: 1px solid var(--colordark);
+	background-color: #ffffff;
+}
+#modal_tiretech .color:nth-of-type(2) {
+	background-color: #932ea4;
+}
+#modal_tiretech .color:nth-of-type(3) {
+	background-color: #cccccc;
+}
+
+/*가을톡*/
+#modal_sns .color:nth-of-type(1) {
+	background-color: #f9c067;
+}
+#modal_sns .color:nth-of-type(2) {
+	background-color: #e36b12;
+}
+
+/*전남의 섬*/
+#modal_island .color:nth-of-type(1) {
+	background-color: #045dc3;
+}
+#modal_island .color:nth-of-type(2) {
+	background-color: #6fac2f;
+}
+
+/*빙그레*/
+#modal_binggrae .color:nth-of-type(1) {
+	background-color: #e2f5ff;
+}
+#mmodal_binggrae .color:nth-of-type(2) {
+	background-color: #ec2129;
+}
