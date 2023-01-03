@@ -38,30 +38,29 @@ $(".btn_clone").click(function () {
 
 /* 모달 */
 $("#list_tving").click(function () {
-	$("#modal_tiving").show();
+	$("#modal_tiving").css("display", "flex");
 });
 $("#list_maison").click(function () {
-	$("#modal_maison").show();
+	$("#modal_maison").css("display", "flex");
 });
 $("#list_eggdrop").click(function () {
-	$("#modal_eggdrop").show();
+	$("#modal_eggdrop").css("display", "flex");
 });
 $("#list_hideco").click(function () {
-	$("#modal_hideco").show();
+	$("#modal_hideco").css("display", "flex");
 });
 $("#list_tiretech").click(function () {
-	$("#modal_tiretech").show();
+	$("#modal_tiretech").css("display", "flex");
 });
 $("#list_sns").click(function () {
-	$("#modal_sns").show();
+	$("#modal_sns").css("display", "flex");
 });
 $("#list_island").click(function () {
-	$("#modal_island").show();
+	$("#modal_island").css("display", "flex");
 });
 $("#list_binggrae").click(function () {
-	$("#modal_binggrae").show();
+	$("#modal_binggrae").css("display", "flex");
 });
-
 $(".closeBtn").click(function () {
 	$(".modal").hide();
 });

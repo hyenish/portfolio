@@ -169,29 +169,45 @@
 .modal {
 	display: none;
 	position: absolute;
-	width: 50vw;
-	max-width: 1600px;
+	width: 80vw;
+	max-width: 1400px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	padding: 30px;
+	padding: 50px;
 	background-color: #fff;
 	border-radius: 20px;
 	z-index: 200;
 }
-.modal .img_box {
-	width: 38vw;
+/* .modal .img_box {
+	display: inline-block;
+	border: 3px solid red;
+	height: 40vh;
 	position: relative;
 	left: 50%;
 	transform: translate(-50%);
 }
 .modal .img_box img {
+	border: 5px solid blue;
+	width: 100%;
+} */
+.modal .img_box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 38vw;
+}
+.modal .img_box img {
 	width: 100%;
 }
+
 .modal .text_box {
+	width: 50%;
 	padding-left: 30px;
 }
 .modal .modal_title {
+	padding: 20px 0 0;
 	margin-bottom: 20px;
 	font-size: 38px;
 	font-family: "Pretendard-Bold";
@@ -258,6 +274,7 @@
 	font-size: 35px;
 	color: var(--colordark);
 }
+
 /********************
 			팔레트
 *********************/
